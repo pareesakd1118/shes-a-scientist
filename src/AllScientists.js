@@ -1,9 +1,24 @@
 import "./AllScientists.css"
+import Scientist from "./Scientist"
 
-function AllScientists() {
+function AllScientists({ dataSet }) {
+
+    const allScientists = dataSet.map(data => {
+        return (
+            <Scientist 
+            id={data.id}
+            name={data.name}
+            image={data.image}
+            field={data.field}
+            key={data.id}
+            />
+        )
+    })
 
     return (
-        <div></div>
+        <div className="scientist-container">
+            {allScientists}
+        </div>
     )
 }
 

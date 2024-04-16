@@ -1,9 +1,13 @@
 import "./Scientist.css"
 
-function Scientist() {
+function Scientist({ id, name, image, field }) {
 
     return (
-        <div></div>
+        <div className="scientist" id={id}>
+            <h3>{name}</h3>
+            <img src={image} alt={`${name}`} />
+            <p>{field}</p>
+        </div>
     )
 }
 
