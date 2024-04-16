@@ -11,6 +11,7 @@ function AllScientists({ dataSet }) {
             image={data.image}
             field={data.field}
             key={data.id}
+            accomplishment={data.accomplishment}
             />
         )
     })
