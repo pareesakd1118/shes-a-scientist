@@ -29,8 +29,8 @@ function FirstPage() {
             <h2>{featuredScientist.name}</h2>
             <p>{featuredScientist.field}</p>
             <p>{featuredScientist.accomplishment}</p>
-            <img src={featuredScientist.image} alt={`image of ${featuredScientist.name}`} />
-            <img src={featuredScientist.backgroundImage} alt={`image of ${featuredScientist.field}`} />
+            <img src={featuredScientist.image} alt={featuredScientist.name} />
+            <img src={featuredScientist.backgroundImage} alt={featuredScientist.field} />
         </div>
     )
 }
