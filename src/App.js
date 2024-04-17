@@ -5,15 +5,19 @@ import FirstPage from "./FirstPage"
 import SecondPage from "./SecondPage"
 import ScientistDetails from "./ScientistDetails"
 import Footer from "./Footer"
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
 
   return (
     <>
     <Nav />
-    <FirstPage />
-    <SecondPage />
-    <ScientistDetails />
+    <Routes >
+      <Route path="/" element={<FirstPage />} />
+      <Route path="/scientists" element={<SecondPage />} />
+      <Route path="/scientists/:id" element={<ScientistDetails />} />
+    </Routes>
     <Footer />
     </>
   );

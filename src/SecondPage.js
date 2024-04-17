@@ -13,11 +13,9 @@ function SecondPage() {
     function displayAllScientists() {
         getAllScientists()
         .then(data => {
-            console.log(data.womenScientists)
             setAllData(data.womenScientists)
+            setSearchData(data.womenScientists)
             setLoading(false)
-            console.log("all", allData)
-            console.log("search", searchData)
         })
     }
 
@@ -25,14 +23,30 @@ function SecondPage() {
         displayAllScientists()
     }, [])
 
+    function filterByField(field) {
+        let filteredArray = allData.filter(data => data.field.toLowerCase().includes(field.toLowerCase()))
+        setSearchData(filteredArray)
+    }
+
+    function searchByKeyword(keyword) {
+        let filteredArray = allData.filter(data => {
+           return data.name.toLowerCase().includes(keyword.toLowerCase()) || data.accomplishment.toLowerCase().includes(keyword.toLowerCase()) || data.blurb.toLowerCase().includes(keyword.toLowerCase()) 
+        })
+        setSearchData(filteredArray)
+    }
+
+    function reset() {
+        setSearchData(allData)
+    }
+
     if (loading) {
         return <LoadingPage />
     }
 
     return (
         <div>
-            <SearchBar />
-            <AllScientists dataSet={allData}/>
+            <SearchBar filterByField={filterByField} searchByKeyword={searchByKeyword} reset={reset} />
+            <AllScientists dataSet={searchData} />
         </div>
     )
 }
