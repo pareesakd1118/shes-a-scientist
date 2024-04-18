@@ -1,10 +1,13 @@
 import "./SearchBar.css"
 import React, { useState } from "react"
+import logo from "./logo.svg"
 
 function SearchBar({ filterByField, searchByKeyword, reset }) {
     const [search, setSearch] = useState("")
+    const [field, setField] = useState("")
 
     const handleSelect = (event) => {
+        setField(event.target.value)
         filterByField(event.target.value)
     }
 
@@ -17,12 +20,13 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
         setSearch("")
         event.preventDefault()
         reset()
+        setField("")
     }
 
     return (
         <>
             <div className="search-bar">
-                <select onChange={handleSelect} id="mySelect">
+                <select value={field} onChange={handleSelect} id="mySelect">
                     <option value="" selected disabled>Select field of study</option>
                     <option value="astronautics">Astronautics</option>
                     <option value="astronomy">Astronomy</option>
@@ -39,12 +43,10 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
                     <option value="virology">Virology</option>
                 </select>
                 <div className="vertical-divider"></div>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for Scientist" />
-                    <input type="submit" value="Submit" />
-                </form>
+                <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for Scientist" />
+                <img id="magnifyglass" src={logo} alt="magnifying glass" onClick={handleSubmit} />
                 <div className="vertical-divider"></div>
-                <button className="reset-btn" onClick={resetSearch}>All Scientists</button>
+                <button className="reset-btn" onClick={resetSearch} >All Scientists</button>
             </div>
             <div className="thick-divider"></div>
         </>

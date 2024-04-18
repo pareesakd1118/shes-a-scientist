@@ -27,3 +27,13 @@ select, .reset-btn, input {
     background: none;
     cursor: pointer;
 }
+
+#magnifyglass {
+    height: 4vh;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+
+input {
+    width: 20vh;
+}
