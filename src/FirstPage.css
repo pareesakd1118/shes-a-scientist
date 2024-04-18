@@ -1,0 +1,30 @@
+.image-container {
+    display: flex;
+    padding-left: 7.5%;
+    padding-right: 5%;
+}
+
+.flex-row {
+    display: flex
+}
+
+.profile-image {
+    height: 50vh;
+    width: 50vh;
+}
+
+.background-image {
+    height: 50vh;
+    width: 100vh;
+}
+
+.frontpage-image-div {
+    padding-left: 6.5%;
+}
+
+.frontpage-image {
+    height: 28.5vh;
+    width: 28.6vh;
+    margin-left: 1%;
+}
+

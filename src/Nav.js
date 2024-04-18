@@ -25,7 +25,7 @@ function Nav() {
         <>
             <nav>
                 <Link to="/">
-                    <h1>She's a Scientist</h1>
+                    <h1>she's a scientist</h1>
                 </Link>
                 <Link className="underline" to={path}>{linkText}</Link>
             </nav>
