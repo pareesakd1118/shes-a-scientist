@@ -43,14 +43,13 @@ function FirstPage() {
     return (
         <div className="fp">
             <div className="image-container">
-                <div>
                     <div className="fp-name-div">
+                        <img className="profile-image" src={featuredScientist.image} alt={featuredScientist.name} />
                         <Link to={`/scientist/${featuredScientist.id}`}>
                         <h2 className="fp-name">{featuredScientist.name}</h2>
                         </Link>
+                        <p className="fp-dob">{featuredScientist.dateOfDeath === "n/a" ? `Born ${featuredScientist.dateOfBirth}` : `${featuredScientist.dateOfBirth} - ${featuredScientist.dateOfDeath}`}</p>
                     </div>
-                    <img className="profile-image" src={featuredScientist.image} alt={featuredScientist.name} />
-                </div>
                 <div className="bg-div">
                     <img  className="background-image" src={featuredScientist.backgroundImage} alt={featuredScientist.field} />
                     <p className="fp-accomp"><i><strong>{featuredScientist.field}</strong></i> {featuredScientist.accomplishment} <Link className="learn-more" to={`/scientist/${featuredScientist.id}`}>Read about HER⇾</Link></p>
