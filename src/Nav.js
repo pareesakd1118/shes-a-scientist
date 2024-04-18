@@ -9,10 +9,10 @@ function Nav() {
 
     function switchLink() {
         if (location.pathname === "/" || location.pathname.startsWith("/scientist/")) {
-            setLinkText("Browse All Scientists")
+            setLinkText("Browse all scientists")
             setPath("/scientists")
         } else {
-            setLinkText("Back Home")
+            setLinkText("Back home")
             setPath("/")
         }
     }
