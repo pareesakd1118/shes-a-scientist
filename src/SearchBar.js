@@ -43,10 +43,10 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
                     <option value="virology">Virology</option>
                 </select>
                 <div className="vertical-divider"></div>
-                <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for Scientist" />
+                <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for scientist" />
                 <img id="magnifyglass" src={logo} alt="magnifying glass" onClick={handleSubmit} />
                 <div className="vertical-divider"></div>
-                <button className="reset-btn" onClick={resetSearch} >All Scientists</button>
+                <button className="reset-btn" onClick={resetSearch} >All scientists</button>
             </div>
             <div className="thick-divider"></div>
         </>

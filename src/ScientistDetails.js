@@ -25,7 +25,7 @@ function ScientistDetails() {
     }
 
     return (
-        <div>
+        <div id="sd">
             <div id="pathway">
                 <Link className="link" to="/">she's a scientist</Link>
                 <p>{"〉"}</p>
@@ -35,15 +35,23 @@ function ScientistDetails() {
             </div>
             <div className="thick-divider"></div>
             <div id="sci-details">
-                <h2>{scientist.name}</h2>
-                <p>{scientist.field}</p>
-                <p>{scientist.accomplishment}</p>
-                <p>{scientist.blurb}</p>
-                <img src={scientist.image} alt={scientist.name} />
-                <img src={scientist.backgroundImage} alt={scientist.field} />
-                <Link>
-                    <button to={scientist.wikipediaLink}>Visit {scientist.name}'s wikipedia</button>
-                </Link>
+                <div id="nf-div">
+                    <h2 id="name">{scientist.name},</h2>
+                    <p id="field">{scientist.field}</p>
+                </div>
+                <div id="sd-dob-acc">
+                    <p className="sd-dob"><strong>{scientist.dateOfDeath === "n/a" ? `Born ${scientist.dateOfBirth}` : `${scientist.dateOfBirth} - ${scientist.dateOfDeath} `}</strong> ⏐</p>
+                    <p>{scientist.accomplishment}</p>
+                </div>
+                <div id="sd-image-blurb">
+                    <img id="sd-prof-image" src={scientist.image} alt={scientist.name} />
+                    <div>
+                        <p id="sd-blurb">{scientist.blurb}
+                            <Link id="wiki-link" className="learn-more" to={scientist.wikipediaLink}>Visit HER wikipedia⇾</Link>
+                        </p>
+                        <img id="sd-bg-image" src={scientist.backgroundImage} alt={scientist.field} />
+                    </div>
+                </div>
             </div>
         </div>
     )

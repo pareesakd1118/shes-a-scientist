@@ -37,3 +37,8 @@ select, .reset-btn, input {
 input {
     width: 20vh;
 }
+
+input[type="text"]:focus {
+    text-decoration: none; 
+    color: gray 
+  }

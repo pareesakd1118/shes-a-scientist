@@ -4,7 +4,7 @@ function Scientist({ id, name, image, field, accomplishment }) {
 
     return (
         <div className="scientist" id={id}>
-            <h3>{name}</h3>
+            <h3 id="sci-name">{name}</h3>
             <div className="image-container">
                 <img className="grid-image" src={image} alt={`${name}`} />
                 <div className="overlay">
