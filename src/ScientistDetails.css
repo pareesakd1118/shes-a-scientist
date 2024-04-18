@@ -1,0 +1,15 @@
+#pathway {
+    display: flex;
+    align-items: baseline;
+    margin-left: 7.5%;
+}
+
+.link {
+    text-decoration: underline;
+    margin-right: 1%;
+}
+
+#sci-details {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}

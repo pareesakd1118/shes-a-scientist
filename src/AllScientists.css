@@ -1,8 +1,10 @@
 .scientist-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    row-gap: 100px; 
-    padding-left: 7.5%;
+    row-gap: 50px; 
+    padding-left: 6.5%;
     margin-right: 7.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }

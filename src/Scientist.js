@@ -11,7 +11,7 @@ function Scientist({ id, name, image, field, accomplishment }) {
                     <p className="text">{accomplishment}</p>
                 </div>
             </div>
-            <p>{field}</p>
+            <p className="field-text">{field}</p>
         </div>
     )
 }
