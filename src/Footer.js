@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <div className="divider"></div>
-            <p>She's a Scientist©</p>
+            <p>she's a scientist©</p>
         </footer>
     )
 }

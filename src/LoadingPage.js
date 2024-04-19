@@ -1,5 +1,5 @@
 import "./LoadingPage.css"
-import beaker from "./beaker.png"
+import beaker from "../src/assets/beaker.png"
 
 function LoadingPage() {
 

@@ -1,6 +1,6 @@
 import "./SearchBar.css"
 import React, { useState } from "react"
-import logo from "./logo.svg"
+import logo from "../src/assets/logo.svg"
 
 function SearchBar({ filterByField, searchByKeyword, reset }) {
     const [search, setSearch] = useState("")

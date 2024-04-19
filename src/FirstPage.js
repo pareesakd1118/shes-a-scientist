@@ -5,11 +5,13 @@ import LoadingPage from "./LoadingPage";
 import { Link } from "react-router-dom";
 import FirstPageImage from "./FirstPageImage";
 import imagesData from "./firstPageImages";
+import Error from "./Error";
 
 function FirstPage() {
     const [featuredScientist, setFeaturedScientist] = useState({})
     const [loading, setLoading] = useState(true)
     const [fpImages, setFpImages] = useState(imagesData)
+    const [error, setError] = useState(null)
 
     function getFeaturedScientist() {
         getAllScientists()
@@ -18,6 +20,7 @@ function FirstPage() {
             setFeaturedScientist(data.womenScientists[number])
             setLoading(false)
         })
+        .catch(error => setError(error.message))
     }
 
     const firstPageImages = fpImages.map(item => {
@@ -35,6 +38,10 @@ function FirstPage() {
     useEffect(() => {
         getFeaturedScientist()
     }, [])
+
+    if (error) {
+        return <Error error={error} />
+    }
 
     if (loading) {
         return <LoadingPage />

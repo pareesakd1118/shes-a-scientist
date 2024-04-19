@@ -44,7 +44,7 @@ a {
 
 @font-face {
   font-family: 'Faustina';
-  src: url('/Users/kamgardp/Downloads/Faustina-Bold/faustina/Faustina-SemiBold.ttf') format('SemiBold');
+  src: url('../src/assets/Faustina-Bold/faustina/Faustina-SemiBold.ttf') format('SemiBold');
 }
 
 h1, h2, h3 {

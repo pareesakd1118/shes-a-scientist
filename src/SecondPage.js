@@ -4,11 +4,13 @@ import SearchBar from "./SearchBar";
 import { getAllScientists } from "./apiCalls";
 import LoadingPage from "./LoadingPage";
 import React, {useState, useEffect} from "react";
+import Error from "./Error";
 
 function SecondPage() {
     const [allData, setAllData] = useState([])
     const [searchData, setSearchData] = useState([])
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     function displayAllScientists() {
         getAllScientists()
@@ -17,6 +19,7 @@ function SecondPage() {
             setSearchData(data.womenScientists)
             setLoading(false)
         })
+        .catch(error => setError(error.message))
     }
 
     useEffect(() => {
@@ -39,6 +42,10 @@ function SecondPage() {
         setSearchData(allData)
     }
 
+    if (error) {
+        return <Error error={error} />
+    }
+    
     if (loading) {
         return <LoadingPage />
     }

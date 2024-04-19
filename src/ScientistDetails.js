@@ -3,22 +3,29 @@ import { Link, useParams } from "react-router-dom";
 import { getSingleScientist } from "./apiCalls";
 import React, { useState, useEffect } from "react";
 import LoadingPage from "./LoadingPage";
+import Error from "./Error";
 
 function ScientistDetails() {
     const { id } = useParams();
     const [scientist, setScientist] = useState({})
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     function displayScientist() {
         getSingleScientist(id)
         .then(data => {
             setLoading(false)
             setScientist(data)})
-    }
+        .catch(error => setError(error.message))
+    }          
 
     useEffect(() => {
         displayScientist()
     }, [])
+
+    if (error) {
+        return <Error error={error} />
+    }
 
     if (loading) {
         return <LoadingPage />
