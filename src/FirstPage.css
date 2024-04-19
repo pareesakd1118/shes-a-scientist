@@ -2,12 +2,13 @@
     display: flex;
     padding-left: 7.5%;
     padding-right: 5%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
 
-.fp {
+/* .fp {
     margin-top: 2%;
-}
+} */
 
 .fp-name-div {
     background-color: #28303C;
@@ -95,4 +96,15 @@
 
 .image-title {
     margin-top: 2%;
+}
+
+#mission-link {
+    text-decoration: underline;
+}
+
+#top-bar {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
 }

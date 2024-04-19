@@ -50,6 +50,10 @@ function FirstPage() {
 
     return (
         <div className="fp">
+            <div id="top-bar">
+                <Link id="mission-link" to="/mission"><strong>Our mission⇾</strong></Link>
+            </div>
+            <div className="thick-divider margin-top"></div>
             <div className="image-container">
                     <div className="fp-name-div">
                         <img className="profile-image" src={featuredScientist.image} alt={featuredScientist.name} />

@@ -14,7 +14,7 @@
     margin-right: 7.5%;
 }
 
-#nf-div, #sd-dob-acc  {
+#sd-div, #sd-dob-acc  {
     display: flex;
     align-items: baseline;
     height: 9vh;

@@ -42,7 +42,7 @@ function ScientistDetails() {
             </div>
             <div className="thick-divider"></div>
             <div id="sci-details">
-                <div id="nf-div">
+                <div id="sd-div">
                     <h2 id="name">{scientist.name},</h2>
                     <p id="field">{scientist.field}</p>
                 </div>
