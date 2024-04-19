@@ -1,6 +1,7 @@
 import "./SearchBar.css"
 import React, { useState } from "react"
 import logo from "../src/assets/logo.svg"
+import PropTypes from 'prop-types';
 
 function SearchBar({ filterByField, searchByKeyword, reset }) {
     const [search, setSearch] = useState("")
@@ -54,3 +55,9 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
 }
 
 export default SearchBar 
+
+SearchBar.propTypes = {
+    filterByField: PropTypes.func.isRequired,
+    searchByKeyword: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired
+}

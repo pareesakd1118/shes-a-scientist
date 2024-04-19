@@ -1,5 +1,5 @@
 import "./Scientist.css"
-
+import PropTypes from 'prop-types';
 function Scientist({ id, name, image, field, accomplishment }) {
 
     return (
@@ -17,3 +17,11 @@ function Scientist({ id, name, image, field, accomplishment }) {
 }
 
 export default Scientist
+
+Scientist.propTypes = {
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    field: PropTypes.string.isRequired,
+    accomplishment: PropTypes.string.isRequired,
+};

@@ -1,6 +1,7 @@
-import "./AllScientists.css"
-import Scientist from "./Scientist"
+import "./AllScientists.css";
+import Scientist from "./Scientist";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 function AllScientists({ dataSet }) {
 
@@ -34,3 +35,13 @@ function AllScientists({ dataSet }) {
 }
 
 export default AllScientists
+
+AllScientists.propTypes = {
+    dataSet: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        field: PropTypes.string.isRequired,
+        accomplishment: PropTypes.string.isRequired,
+      })).isRequired
+};
