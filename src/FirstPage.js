@@ -31,6 +31,7 @@ function FirstPage() {
                 imageUrl={item.imageUrl}
                 source={item.source}
                 date={item.date}
+                wikilink={item.wikilink}
             />
         )
     })
