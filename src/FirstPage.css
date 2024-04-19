@@ -1,0 +1,110 @@
+.image-container {
+    display: flex;
+    padding-left: 7.5%;
+    padding-right: 5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+/* .fp {
+    margin-top: 2%;
+} */
+
+.fp-name-div {
+    background-color: #28303C;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Vertically center items */
+    justify-content: center;
+    width: 50vh;
+    color: white;
+}
+
+.fp-dob {
+    font-size: large;
+}
+
+.fp-name {
+    font-size: xx-large;
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 3%;
+    width: 45;
+}
+
+.fp-field {
+    margin-left: 2%;
+    margin-bottom: 0%;
+}
+
+.fp-accomp {
+    width: 100vh;
+}
+
+.profile-image {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    margin-top: 3%;
+}
+
+.background-image {
+    height: 48vh;
+    width: 100vh;
+}
+
+.bg-div {
+    text-align: center;
+}
+
+.frontpage-image-div {
+    padding-left: 6.5%;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.frontpage-image {
+    height: 23vh;
+    width: 28.6vh;
+}
+
+.learn-more {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.fp-ihp {
+    display: flex;
+    flex-direction: column;
+    width: 28.6vh;
+    margin-left: 1%;
+    height: 62vh;
+    position: relative;
+}
+
+.bottom {
+    position: absolute; 
+    bottom: 0;
+}
+
+.image-divider {
+    height: 1px;
+    background-color: #ccc; 
+    width: 27vh; 
+    margin: 0 auto; 
+}
+
+.image-title {
+    margin-top: 2%;
+}
+
+#mission-link {
+    text-decoration: underline;
+}
+
+#top-bar {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+}

@@ -1,0 +1,14 @@
+.scientist-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    row-gap: 20px; 
+    padding-left: 6.5%;
+    margin-right: 7.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#not-found {
+    text-align: center;
+}

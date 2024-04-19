@@ -1,0 +1,35 @@
+.beaker {
+    width: 60vh;
+    margin-top: 3%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .beaker {
+      animation: beaker-spin infinite 5s linear;
+    }
+  }
+
+@keyframes beaker-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100vh; 
+}

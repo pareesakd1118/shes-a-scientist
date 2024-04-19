@@ -1,0 +1,64 @@
+#pathway {
+    display: flex;
+    align-items: baseline;
+    margin-left: 7.5%;
+}
+
+.link {
+    text-decoration: underline;
+    margin-right: 1%;
+}
+
+#sci-details {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}
+
+#sd-div, #sd-dob-acc  {
+    display: flex;
+    align-items: baseline;
+    height: 9vh;
+}
+
+#name {
+    font-size: xx-large;
+}
+
+#field {
+    font-size: x-large;
+    margin-left: 1%;
+}
+
+.sd-dob {
+    margin-top: 0;
+    margin-right: 0.3%;
+    font-size: large;
+}
+
+#sd-image-blurb {
+    display: flex;
+    height: 70vh;
+}
+
+#sd-blurb {
+    margin-top: 0;
+}
+
+#sd-prof-image {
+    height: 70vh;
+    width: 50vh;
+    margin-right: 2%;
+}
+
+#sd-bg-image {
+    width: 100vh;
+    height: 47vh;
+}
+
+#sd {
+    margin-bottom: 3%;
+}
+
+#wiki-link {
+    margin-left: 1%;
+}

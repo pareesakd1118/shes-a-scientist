@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: 'Faustina';
+  src: url('../src/assets/Faustina-Bold/faustina/Faustina-SemiBold.ttf') format('SemiBold');
+}
+
+h1, h2, h3 {
+  font-family: 'Faustina', sans-serif;
+}
+
+ h1 {
+  font-size: xxx-large;
+  margin: 10px;
+ }
