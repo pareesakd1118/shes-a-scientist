@@ -44,4 +44,4 @@ AllScientists.propTypes = {
         field: PropTypes.string.isRequired,
         accomplishment: PropTypes.string.isRequired,
       })).isRequired
-  };
+};
