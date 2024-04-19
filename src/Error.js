@@ -1,6 +1,7 @@
 import "./Error.css";
 import React from "react-router-dom";
 import biohazard from "../src/assets/biohazard.jpg"
+import PropTypes from 'prop-types';
 
 function Error({ error }) {
 
@@ -14,3 +15,7 @@ function Error({ error }) {
 }
 
 export default Error
+
+Error.propTypes = {
+    error: PropTypes.string.isRequired,
+};
