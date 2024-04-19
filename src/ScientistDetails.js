@@ -38,7 +38,7 @@ function ScientistDetails() {
                 <p>{"〉"}</p>
                 <Link className="link" to="/scientists">featured scientists</Link>
                 <p>{"〉"}</p>
-                <p>{scientist.name}</p>
+                <p id="sd-name">{scientist.name}</p>
             </div>
             <div className="thick-divider"></div>
             <div id="sci-details">
@@ -48,11 +48,11 @@ function ScientistDetails() {
                 </div>
                 <div id="sd-dob-acc">
                     <p className="sd-dob"><strong>{scientist.dateOfDeath === "n/a" ? `Born ${scientist.dateOfBirth}` : `${scientist.dateOfBirth} - ${scientist.dateOfDeath} `}</strong> ⏐</p>
-                    <p>{scientist.accomplishment}</p>
+                    <p id="sd-accomplish">{scientist.accomplishment}</p>
                 </div>
                 <div id="sd-image-blurb">
                     <img id="sd-prof-image" src={scientist.image} alt={scientist.name} />
-                    <div>
+                    <div id="sd-blurb-div">
                         <p id="sd-blurb">{scientist.blurb}
                             <Link id="wiki-link" className="learn-more" to={scientist.wikipediaLink}>Visit HER wikipedia⇾</Link>
                         </p>

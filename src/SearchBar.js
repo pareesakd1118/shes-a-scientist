@@ -25,7 +25,7 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
     }
 
     return (
-        <>
+        <div id="sb-div">
             <div className="search-bar">
                 <select value={field} onChange={handleSelect} id="mySelect">
                     <option value="" selected disabled>Select field of study</option>
@@ -44,13 +44,15 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
                     <option value="virology">Virology</option>
                 </select>
                 <div className="vertical-divider"></div>
-                <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for scientist" />
-                <img id="magnifyglass" src={logo} alt="magnifying glass" onClick={handleSubmit} />
+                <div id="search-div">
+                    <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for scientist" />
+                    <img id="magnifyglass" src={logo} alt="magnifying glass" onClick={handleSubmit} />
+                </div>
                 <div className="vertical-divider"></div>
                 <button className="reset-btn" onClick={resetSearch} >All scientists</button>
             </div>
             <div className="thick-divider"></div>
-        </>
+        </div>
     )
 }
 

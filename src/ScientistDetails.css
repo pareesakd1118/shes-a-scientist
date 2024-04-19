@@ -51,7 +51,7 @@
 }
 
 #sd-bg-image {
-    width: 100vh;
+    width: 120vh;
     height: 47vh;
 }
 
@@ -61,4 +61,47 @@
 
 #wiki-link {
     margin-left: 1%;
+}
+
+@media screen and (max-width: 1023px) {
+    #sd-prof-image {
+        height: 70vh;
+        width: 50vh;
+    }
+    #sd-bg-image {
+        width: 50vh;
+        height: 25vh;
+    }
+    #sd-blurb {
+        font-size: small;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .link, #sd-name {
+        font-size: small;
+    }
+    #name, #field {
+        font-size: large;
+    }
+    .sd-dob, #sd-accomplish {
+        font-size: small;
+    }
+    #sd-image-blurb {
+        display: flex;
+        flex-direction: column;
+    }
+    #sd-blurb-div {
+        margin-top: 3%
+    }
+    #sd-bg-image {
+        width: 50vh;
+        height: 25vh;
+    }
+    #sd-blurb {
+        width: 50vh;
+    }
+    #sd {
+        margin-bottom: 100%;
+    }
 }

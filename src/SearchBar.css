@@ -19,6 +19,11 @@
     padding-left: 7.5%;
 }
 
+#search-div {
+    display: flex;
+    align-items: center;
+}
+
 select, .reset-btn, input {
     border: none;
     text-decoration: underline;
@@ -30,15 +35,41 @@ select, .reset-btn, input {
 
 #magnifyglass {
     height: 4vh;
-    margin-top: 1vh;
+    margin-bottom: 1vh;
     cursor: pointer;
 }
 
 input {
-    width: 20vh;
+    width: 22vh;
 }
 
 input[type="text"]:focus {
     text-decoration: none; 
     color: gray 
-  }
+}
+
+@media screen and (max-width: 767px) {
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 20vh;
+    }
+
+    select, .reset-btn, #search-div {
+        border: 1px solid #ccc; 
+        height: 5vh;
+        border-radius: 5px;
+        margin-top: 1vh;
+    }
+
+    .reset-btn{
+        background-color: #ccc; 
+        text-decoration: none;
+        border: 1px solid black; 
+    }
+
+    .vertical-divider {
+        display: none
+    }
+}
