@@ -1,6 +1,6 @@
 # <p align="center">She's A Scientist</p>
 
-<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we knew it, and broke down countless barriers for women as a whole. Users are shown a dashboard of women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
+<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we know it, and who broke down countless barriers for women as a whole. Users are shown a dashboard of women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
 
 ### <p align="center">Contributors</p>
 <div align="center">
