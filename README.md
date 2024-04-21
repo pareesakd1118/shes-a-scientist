@@ -1,6 +1,6 @@
 # <p align="center">She's A Scientist</p>
 
-<p align="center">An homage to my late grandmother and to all women scientists, [she's a scientist](https://shes-a-scientist.vercel.app/) is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we know it, and who broke down countless barriers for women as a whole. Designed to resemble the world reknowned science journal, nature, she's a scientist users are shown a randomly featured woman scientist on the first page. Users can subsequently click on a link to learn more about the featured scientist, or navigate to a dashboard of many women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
+<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we know it, and who broke down countless barriers for women as a whole. Designed to resemble the world reknowned science journal, nature, she's a scientist users are shown a randomly featured woman scientist on the first page. Users can subsequently click on a link to learn more about the featured scientist, or navigate to a dashboard of many women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
 
 ### <p align="center">Contributors</p>
 <div align="center">
@@ -32,22 +32,23 @@
 </div>
 
 ## Installation Instructions:
-- clone the backend server to your machine
+- Visit she's a scientist [here](https://shes-a-scientist.vercel.app/), OR
+1. clone the backend server to your machine
     
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
     ```
     
-- Run `cd shes-a-scientist-api`
-- Run `npm install` to install packages
-- Run `node server.js` to run the local server
-- clone the frontend repo to your machine or navigate to this [link](https://shes-a-scientist.vercel.app/)   
+2. Run `cd shes-a-scientist-api`
+3. Run `npm install` to install packages
+4. Run `node server.js` to run the local server
+5. clone the frontend repo to your machine  
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
-- Run `cd shes-a-scientist`
-- Run `npm install` to install packages
-- Run `npm start` to run the local server  
+6. Run `cd shes-a-scientist`
+7. Run `npm install` to install packages
+8. Run `npm start` to run the local server  
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
