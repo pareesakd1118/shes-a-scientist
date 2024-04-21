@@ -41,7 +41,7 @@
 - Run `cd shes-a-scientist-api`
 - Run `npm install` to install packages
 - Run `node server.js` to run the local server
-- clone the frontend repo to your machine or navigate to this [link](https://tednaphil.github.io/FitLit/)   
+- clone the frontend repo to your machine or navigate to this [link](https://she-s-a-scientist-deploy.vercel.app/))   
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
