@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# <p align="center">She's A Scientist</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we knew it, and broke down countless barriers for women as a whole. Users are shown a dashboard of women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
 
-## Available Scripts
+### <p align="center">Contributors</p>
+<div align="center">
 
-In the project directory, you can run:
+ [Pareesa Kamgar-Dayhoff](https://github.com/pareesakd1118)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### <p align="center">Technologies Used</p>
+<div align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge" alt="React badge">
+  <img src="https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=for-the-badge" alt="router">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge" alt="javascript badge">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge" alt="html badge">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge" alt="css badge">
+  <img src="https://img.shields.io/badge/Cypress-69D3A7?logo=cypress&logoColor=fff&style=for-the-badge" alt="cypress badge">
+  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=for-the-badge" alt="vscode badge">
+  <img src="https://img.shields.io/badge/Lighthouse-F44B21?logo=lighthouse&logoColor=fff&style=for-the-badge" alt="lighthouse badge">
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Preview:
+<div align="center">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</div>
 
-### `npm run eject`
+## Installation Instructions:
+- clone the backend server to your machine
+    
+    ```
+    git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
+    ```
+    
+- Run `cd shes-a-scientist-api`
+- Run `npm install` to install packages
+- Run `node server.js` to run the local server
+- clone the frontend repo to your machine or navigate to this [link](https://tednaphil.github.io/FitLit/)   
+    ```
+    git clone git@github.com:pareesakd1118/shes-a-scientist.git
+    ```
+- Run `cd shes-a-scientist`
+- Run `npm install` to install packages
+- Run `npm start` to run the local server  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Context:
+<!-- wins, challenges, time spent, etc -->
+- Ongoing group project begun in the 4th week of the contributor learning React
+- Approximately 15 hours to complete test suite and functionality
+- Goals:
+  ```
+  - Build a react application with multiple pages and allows users to manipulate data in some way (search and filter)
+  ```
+- Wins:
+  ```
+  - Building a backend to successfully fetch from
+  - Implementing React and Router
+  ```
+- Challenges:
+  ```
+  - Getting cypress to work as intended and identify tests. 
+  ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements:
+  ```
+  - Add a favoriting feature to save favorite scientists.
+  - Add a form for others to post their submissions to the database and have more scientists added to the dashboard. 
+  ```
