@@ -32,22 +32,23 @@
 </div>
 
 ## Installation Instructions:
-- clone the backend server to your machine
+- Visit she's a scientist [here](https://shes-a-scientist.vercel.app/), OR
+1. clone the backend server to your machine
     
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
     ```
     
-- Run `cd shes-a-scientist-api`
-- Run `npm install` to install packages
-- Run `node server.js` to run the local server
-- clone the frontend repo to your machine or navigate to this [link](https://she-s-a-scientist-deploy.vercel.app/))   
+2. Run `cd shes-a-scientist-api`
+3. Run `npm install` to install packages
+4. Run `node server.js` to run the local server
+5. clone the frontend repo to your machine  
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
-- Run `cd shes-a-scientist`
-- Run `npm install` to install packages
-- Run `npm start` to run the local server  
+6. Run `cd shes-a-scientist`
+7. Run `npm install` to install packages
+8. Run `npm start` to run the local server  
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
