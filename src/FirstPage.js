@@ -49,7 +49,7 @@ function FirstPage() {
     }
 
     return (
-        <div className="fp">
+        <div className="fpcont">
             <div id="top-bar">
                 <Link id="mission-link" to="/mission"><strong>Our mission⇾</strong></Link>
             </div>

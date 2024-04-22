@@ -1,20 +1,15 @@
 .image-container {
     display: flex;
     padding-left: 7.5%;
-    padding-right: 5%;
     margin-bottom: 1%;
     margin-top: 1%;
 }
-
-/* .fp {
-    margin-top: 2%;
-} */
 
 .fp-name-div {
     background-color: #28303C;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Vertically center items */
+    align-items: center;
     justify-content: center;
     width: 50vh;
     color: white;
@@ -50,7 +45,7 @@
 
 .background-image {
     height: 48vh;
-    width: 100vh;
+    width: 118vh;
 }
 
 .bg-div {
@@ -65,7 +60,7 @@
 
 .frontpage-image {
     height: 23vh;
-    width: 28.6vh;
+    width: 32vh;
 }
 
 .learn-more {
@@ -76,9 +71,9 @@
 .fp-ihp {
     display: flex;
     flex-direction: column;
-    width: 28.6vh;
+    width: 32vh;
     margin-left: 1%;
-    height: 62vh;
+    height: 67vh;
     position: relative;
 }
 
@@ -109,10 +104,106 @@
     margin-left: 7.5%;
 }
 
+.fpcont {
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 1023px) {
+    .background-image {
+        height: 24vh;
+        width: 59vh;
+    }
+
+    .fp-name-div {
+        height: 30vh;
+    }
+
+    .profile-image {
+        height: 15vh;
+        width: 15vh;
+    }
+
+    .fp-name {
+        font-size: large;
+        color: white;
+        text-decoration: underline;
+        margin-bottom: 3%;
+    }
+
+    .fp-accomp {
+        width: 50vh;
+        font-size: small;
+    }
+
+    .fp-dob {
+        font-size: small;
+    }
+
+    .fp-ihp {
+        width: 21vh;
+        height: 67vh;
+        font-size: small;
+    }
+
+    .frontpage-image {
+        height: 16vh;
+        width: 21vh;
+    }
 
 }
   
 @media screen and (max-width: 767px) {
+    .image-container {
+        flex-direction: column;
+    }
 
+    .background-image {
+        height: 22vh;
+        width: 50vh;
+    }
+
+    .bg-div {
+        width: 40vh;
+    }
+
+    .fp-name-div {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    .profile-image {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .fp-dob {
+        font-size: large;
+    }
+    
+    .fp-name {
+        font-size: xx-large;
+    }
+
+    .frontpage-image-div {
+        flex-direction: column;
+    }
+
+    .fp-ihp {
+        width: 50vh;
+        margin-left: 1%;
+        height: fit-content;
+        margin-bottom: 3%;
+        font-size: medium;
+    }
+
+    .frontpage-image {
+        height: 32vh;
+        width: 50vh;
+    }
+
+    .bottom {
+        position: relative;
+    }
 }
