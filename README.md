@@ -50,8 +50,13 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
-6. You may also want to check the backend repo linked [here](https://github.com/pareesakd1118/shes-a-scientist-api) for documentation. The backend server is deployed and does not need to be cloned or run locally. 
+6. You may also want to check the backend repo linked [here](https://github.com/pareesakd1118/shes-a-scientist-api) for documentation. The backend server is deployed and does not need to be cloned or run locally.
 
+## Run End to End testing using Cypress
+1. Run `npm i -D cypress`
+2. Ensure package.json includes the following:
+`{ "scripts": {"cypress": "cypress open"} }`
+3. Run `npm run cypress`
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
