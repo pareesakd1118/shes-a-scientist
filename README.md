@@ -1,6 +1,6 @@
 # <p align="center">She's A Scientist</p>
 
-<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we know it, and who broke down countless barriers for women as a whole. Designed to resemble the world reknowned science journal, nature, she's a scientist users are shown a randomly featured woman scientist on the first page. Users can subsequently click on a link to learn more about the featured scientist, or navigate to a dashboard of many women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
+<p align="center">An homage to my late grandmother and to all women scientists, she's a scientist is a web application built to feature and highlight the careers of just a few of the many women scientists whose work has shaped technology, medicine and life as we know it. She's a scientist is designed to resemble the world reknowned science journal, nature, and upon visiting the web application, users are shown a randomly featured scientist with a brief highlight of her work. Users can subsequently click on a link to learn more about the featured scientist, or navigate to a dashboard of many women scientists, with a quick highlight on their work and their respective fields. Users can filter the scientists by field, or search for specific scientist by keyword, or name. Additionally, users can click on a specific scientists' image to be taken to a page with additional information on their life and work, and a link to visit their wikipedia.</p>
 
 ### <p align="center">Contributors</p>
 <div align="center">
@@ -26,6 +26,10 @@
 
 
 
+https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0-447d-b952-528eeba2fb9c
+
+
+
 
 
 
@@ -33,7 +37,7 @@
 
 ## Installation Instructions:
 - Visit she's a scientist [here](https://shes-a-scientist.vercel.app/), OR
-1. clone the backend server to your machine
+1. clone the backend server to your machine, linked [here](https://github.com/pareesakd1118/shes-a-scientist-api)
     
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
@@ -52,11 +56,11 @@
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
-- Ongoing group project begun in the 4th week of the contributor learning React
+- This project begun in the 4th week of the contributor learning React
 - Approximately 15 hours to complete test suite and functionality
 - Goals:
   ```
-  - Build a react application with multiple pages and allows users to manipulate data in some way (search and filter)
+  - Build a react application with multiple pages that allows users to manipulate data in some way (search and filter)
   ```
 - Wins:
   ```
@@ -65,7 +69,7 @@
   ```
 - Challenges:
   ```
-  - Getting cypress to work as intended and identify tests. 
+  - Getting cypress to work as intended and identify tests 
   ```
 
 ## Future Improvements:
