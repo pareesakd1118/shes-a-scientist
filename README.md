@@ -37,22 +37,21 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
 
 ## Installation Instructions:
 - Visit she's a scientist [here](https://shes-a-scientist.vercel.app/), OR
-1. clone the backend server to your machine, linked [here](https://github.com/pareesakd1118/shes-a-scientist-api)
+1. clone the frontend repo to your machine
     
     ```
-    git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
+    git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
     
-2. Run `cd shes-a-scientist-api`
+2. Run `cd shes-a-scientist`
 3. Run `npm install` to install packages
-4. Run `node server.js` to run the local server
+4. Run `npm start` to run the local server
 5. clone the frontend repo to your machine  
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist.git
     ```
-6. Run `cd shes-a-scientist`
-7. Run `npm install` to install packages
-8. Run `npm start` to run the local server  
+6. You may also want to check the backend repo linked [here](https://github.com/pareesakd1118/shes-a-scientist-api) for documentation. The backend server is deployed and does not need to be cloned or run locally. 
+
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
