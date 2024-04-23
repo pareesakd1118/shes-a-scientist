@@ -1,15 +1,8 @@
-// describe('template spec', () => {
-//   it('passes', () => {
-//     cy.visit('https://example.cypress.io')
-//   })
-// })
-
 describe('FirstPage Component', () => {
   beforeEach(() => {
-  cy.intercept('GET', '/api/v1/womenscientists', {
+  cy.intercept('GET', 'https://gentle-sierra-88471-456c461e0158.herokuapp.com/api/v1/womenscientists', {
   statusCode: 200,
-  body: [
-    {
+  body: { "womenScientists": [ {
       "name": "Margaret Oakley Dayhoff",
       "field": "Physics, Chemistry",
       "dateOfBirth": "March 11, 1925",
@@ -57,7 +50,7 @@ describe('FirstPage Component', () => {
       "blurb": "Jane Goodall, born in 1934, is a renowned primatologist, ethologist, and conservationist best known for her groundbreaking studies of chimpanzees in Tanzania's Gombe Stream National Park. Her pioneering research revolutionized our understanding of primate behavior, revealing remarkable insights into their social structures, tool use, and emotional lives. Goodall's work transcends scientific inquiry, as she has dedicated her life to conservation efforts and advocating for the protection of endangered species and their habitats. Through her tireless advocacy and grassroots initiatives, she has inspired global conservation movements and empowered communities to take action for wildlife and the environment. Goodall's enduring legacy serves as a beacon of hope for conservationists worldwide, reminding us of our responsibility to protect and preserve the natural world for future generations.",
       "wikipediaLink": "https://en.wikipedia.org/wiki/Jane_Goodall"
     }
-  ],
+  ]},
 })
     cy.visit('https://shes-a-scientist.vercel.app/'); 
   });
