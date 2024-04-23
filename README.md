@@ -37,7 +37,7 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
 
 ## Installation Instructions:
 - Visit she's a scientist [here](https://shes-a-scientist.vercel.app/), OR
-1. clone the backend server to your machine
+1. clone the backend server to your machine, linked [here](https://github.com/pareesakd1118/shes-a-scientist-api)
     
     ```
     git clone git@github.com:pareesakd1118/shes-a-scientist-api.git
