@@ -56,11 +56,11 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
-- Ongoing group project begun in the 4th week of the contributor learning React
+- This project begun in the 4th week of the contributor learning React
 - Approximately 15 hours to complete test suite and functionality
 - Goals:
   ```
-  - Build a react application with multiple pages and allows users to manipulate data in some way (search and filter)
+  - Build a react application with multiple pages that allows users to manipulate data in some way (search and filter)
   ```
 - Wins:
   ```
@@ -69,7 +69,7 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
   ```
 - Challenges:
   ```
-  - Getting cypress to work as intended and identify tests. 
+  - Getting cypress to work as intended and identify tests 
   ```
 
 ## Future Improvements:
