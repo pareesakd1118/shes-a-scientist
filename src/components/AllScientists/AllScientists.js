@@ -1,6 +1,5 @@
 import "./AllScientists.css";
 import Scientist from "../Scientist/Scientist";
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 function AllScientists({ dataSet }) {
@@ -15,15 +14,14 @@ function AllScientists({ dataSet }) {
 
     const allScientists = dataSet.map(data => {
         return (
-            <Link to={`/scientist/${data.id}`} key={data.id}>
                 <Scientist 
-                id={data.id}
-                name={data.name}
-                image={data.image}
-                field={data.field}
-                accomplishment={data.accomplishment}
+                    key={data.id}
+                    id={data.id}
+                    name={data.name}
+                    image={data.image}
+                    field={data.field}
+                    accomplishment={data.accomplishment}
                 />
-            </Link>
         )
     })
 
