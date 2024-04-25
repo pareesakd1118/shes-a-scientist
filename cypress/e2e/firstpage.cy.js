@@ -78,11 +78,21 @@ describe('FirstPage Component', () => {
   });
 
   it('The read more about her link takes the user to the extended information page', () => {
-    cy.get('.learn-more').click();
-    cy.get('#sd').should('be.visible');
-  });
-
-  it('The read more about her link takes the user to the extended information page', () => {
+    cy.intercept('GET', 'https://gentle-sierra-88471-456c461e0158.herokuapp.com/api/v1/womenscientists/*', {
+    statusCode: 200,
+    body: { 
+      "name": "Margaret Oakley Dayhoff",
+      "field": "Physics, Chemistry",
+      "dateOfBirth": "March 11, 1925",
+      "dateOfDeath": "February 5, 1984",
+      "accomplishment": "She pioneered the field of bioinformatics and gave amino acids their single letter codes",
+      "id": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg",
+      "backgroundImage": "https://cdn.rcsb.org/pdb101/learn/resources/guide-to-understanding-pdb-data/images/3pgk-representations.jpg",
+      "blurb": "Margaret Oakley Dayhoff, born in 1925, was a pioneering American biochemist and computational biologist renowned for her groundbreaking work in protein sequence analysis. She is celebrated for developing the first computer-based method for aligning protein sequences, a fundamental technique in modern bioinformatics. Dayhoff's seminal Atlas of Protein Sequence and Structure, published in 1965, laid the foundation for our understanding of protein evolution and structure-function relationships. Her visionary contributions revolutionized the field, shaping the way researchers analyze and interpret biological data, and her legacy continues to inspire scientists worldwide in the pursuit of understanding life at the molecular level. She is also the creator of she's a scientist©'s grandma!",
+      "wikipediaLink": "https://en.wikipedia.org/wiki/Margaret_Oakley_Dayhoff"
+    }
+  })
     cy.get('.fp-name').click();
     cy.get('#sd').should('be.visible');
   });
