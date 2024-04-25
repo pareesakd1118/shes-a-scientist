@@ -54,9 +54,7 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
 
 ## Run End to End testing using Cypress
 1. Run `npm i -D cypress`
-2. Ensure package.json includes the following:
-`{ "scripts": {"cypress": "cypress open"} }`
-3. Run `npm run cypress`
+3. Run `npx cypress run` in root directory to run cypress
 
 ## Context:
 <!-- wins, challenges, time spent, etc -->
