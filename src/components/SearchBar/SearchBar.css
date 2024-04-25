@@ -1,0 +1,75 @@
+.thick-divider {
+    height: 4px;
+    background-color: #000000; 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.vertical-divider {
+    height: 100%;
+    background-color: #ccc; 
+    width: 2px; 
+    margin-left: 1%; 
+    margin-right: 1%; 
+}
+
+.search-bar {
+    display: flex;
+    height: 7vh;
+    padding-left: 7.5%;
+}
+
+#search-div {
+    display: flex;
+    align-items: center;
+}
+
+select, .reset-btn, input {
+    border: none;
+    text-decoration: underline;
+    font-size: medium;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+}
+
+#magnifyglass {
+    height: 4vh;
+    margin-bottom: 1vh;
+    cursor: pointer;
+}
+
+input {
+    width: 22vh;
+}
+
+input[type="text"]:focus {
+    text-decoration: none; 
+    color: gray 
+}
+
+@media screen and (max-width: 767px) {
+    .search-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 20vh;
+    }
+
+    select, .reset-btn, #search-div {
+        border: 1px solid #ccc; 
+        height: 5vh;
+        border-radius: 5px;
+        margin-top: 1vh;
+    }
+
+    .reset-btn{
+        background-color: #ccc; 
+        text-decoration: none;
+        border: 1px solid black; 
+    }
+
+    .vertical-divider {
+        display: none
+    }
+}
