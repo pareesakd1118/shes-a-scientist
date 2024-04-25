@@ -1,0 +1,209 @@
+.image-container {
+    display: flex;
+    padding-left: 7.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.fp-name-div {
+    background-color: #28303C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    color: white;
+}
+
+.fp-dob {
+    font-size: large;
+}
+
+.fp-name {
+    font-size: xx-large;
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 3%;
+    width: 45;
+}
+
+.fp-field {
+    margin-left: 2%;
+    margin-bottom: 0%;
+}
+
+.fp-accomp {
+    width: 100vh;
+}
+
+.profile-image {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    margin-top: 3%;
+}
+
+.background-image {
+    height: 48vh;
+    width: 118vh;
+}
+
+.bg-div {
+    text-align: center;
+}
+
+.frontpage-image-div {
+    padding-left: 6.5%;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.frontpage-image {
+    height: 23vh;
+    width: 32vh;
+}
+
+.learn-more {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.fp-ihp {
+    display: flex;
+    flex-direction: column;
+    width: 32vh;
+    margin-left: 1%;
+    height: 67vh;
+    position: relative;
+}
+
+.bottom {
+    position: absolute; 
+    bottom: 0;
+}
+
+.image-divider {
+    height: 1px;
+    background-color: #ccc; 
+    width: 27vh; 
+    margin: 0 auto; 
+}
+
+.image-title {
+    margin-top: 2%;
+}
+
+#mission-link {
+    text-decoration: underline;
+}
+
+#top-bar {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+}
+
+.fpcont {
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+    .background-image {
+        height: 24vh;
+        width: 59vh;
+    }
+
+    .fp-name-div {
+        height: 30vh;
+    }
+
+    .profile-image {
+        height: 15vh;
+        width: 15vh;
+    }
+
+    .fp-name {
+        font-size: large;
+        color: white;
+        text-decoration: underline;
+        margin-bottom: 3%;
+    }
+
+    .fp-accomp {
+        width: 50vh;
+        font-size: small;
+    }
+
+    .fp-dob {
+        font-size: small;
+    }
+
+    .fp-ihp {
+        width: 21vh;
+        height: 67vh;
+        font-size: small;
+    }
+
+    .frontpage-image {
+        height: 16vh;
+        width: 21vh;
+    }
+
+}
+  
+@media screen and (max-width: 767px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .background-image {
+        height: 22vh;
+        width: 50vh;
+    }
+
+    .bg-div {
+        width: 40vh;
+    }
+
+    .fp-name-div {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    .profile-image {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .fp-dob {
+        font-size: large;
+    }
+    
+    .fp-name {
+        font-size: xx-large;
+    }
+
+    .frontpage-image-div {
+        flex-direction: column;
+    }
+
+    .fp-ihp {
+        width: 50vh;
+        margin-left: 1%;
+        height: fit-content;
+        margin-bottom: 3%;
+        font-size: medium;
+    }
+
+    .frontpage-image {
+        height: 32vh;
+        width: 50vh;
+    }
+
+    .bottom {
+        position: relative;
+    }
+}

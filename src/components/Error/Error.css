@@ -1,0 +1,14 @@
+#error {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#err-h1 {
+    font-size: xxx-large;
+}
+
+#err-message {
+    font-size: xx-large;
+}
