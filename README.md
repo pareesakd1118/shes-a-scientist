@@ -46,11 +46,7 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/29d2a7fe-dfb0
 2. Run `cd shes-a-scientist`
 3. Run `npm install` to install packages
 4. Run `npm start` to run the local server
-5. clone the frontend repo to your machine  
-    ```
-    git clone git@github.com:pareesakd1118/shes-a-scientist.git
-    ```
-6. You may also want to check the backend repo linked [here](https://github.com/pareesakd1118/shes-a-scientist-api) for documentation. The backend server is deployed and does not need to be cloned or run locally.
+5. You may also want to check the backend repo linked [here](https://github.com/pareesakd1118/shes-a-scientist-api) for documentation. The backend server is deployed and does not need to be cloned or run locally.
 
 ## Run End to End testing using Cypress
 1. Run `npm i -D cypress`
