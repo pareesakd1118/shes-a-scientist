@@ -2,49 +2,12 @@ import "./Favorites.css";
 import Scientist from "../Scientist/Scientist";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import { getAllScientists } from "../../apiCalls";
-import LoadingPage from "../LoadingPage/LoadingPage";
-import React, {useState, useEffect} from "react";
-import Error from "../Error/Error";
+import React from "react";
 
-function Favorites() {
-    const [allData, setAllData] = useState([])
-    const [favoriteScientists, setFavoriteScientists] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
 
-    function displayFavoriteScientists() {
-        getAllScientists()
-        .then(data => {
-            setAllData(data.womenScientists)
-            setLoading(false)
-        })
-        .catch(error => setError(error.message))
-    }
-
-    useEffect(() => {
-        displayFavoriteScientists()
-    }, [])
-
-    function favoriteScientist(id) {
-        let favorite = allData.find(data => parseInt(data.id) === parseInt(id))
-        setFavoriteScientists([...favoriteScientists, favorite])
-    }
-
-    function unfavoriteScientist(id) {
-        let filter = allData.filter(data => parseInt(data.id) !== parseInt(id))
-        setFavoriteScientists(filter)
-    }
-
-    if (error) {
-        return <Error error={error} />
-    }
-    
-    if (loading) {
-        return <LoadingPage />
-    }
-    
-    if (!favoriteScientists.length) {
+function Favorites({ dataSet, unfavoriteScientist, favoriteScientist }) {
+  
+    if (!dataSet.length) {
         return (
             <div id="not-found">
                 <h2>You don't have any favorite scientists yet!</h2>
@@ -53,8 +16,7 @@ function Favorites() {
         )
     }
 
-
-    const favorites = favoriteScientists.map(data => {
+    const favorites = dataSet.map(data => {
         return (
                 <Scientist 
                     key={data.id}
@@ -63,6 +25,8 @@ function Favorites() {
                     image={data.image}
                     field={data.field}
                     accomplishment={data.accomplishment}
+                    unfavoriteScientist={unfavoriteScientist} 
+                    favoriteScientist={favoriteScientist}
                 />
         )
     })
