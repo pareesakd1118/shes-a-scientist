@@ -10,6 +10,12 @@ nav {
     margin-top: 4vh;
     font-size: 1em;
 }
+
+#nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vh;
+}
   
 @media screen and (max-width: 767px) {
     h1 {

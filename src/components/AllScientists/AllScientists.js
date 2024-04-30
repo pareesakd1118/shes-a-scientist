@@ -2,12 +2,13 @@ import "./AllScientists.css";
 import Scientist from "../Scientist/Scientist";
 import PropTypes from 'prop-types';
 
-function AllScientists({ dataSet }) {
+function AllScientists({ dataSet, favoriteScientist, unfavoriteScientist, favoriteScientists }) {
+    const favoritedScientistIds = favoriteScientists.map(scientist => scientist.id)
 
     if (!dataSet.length) {
         return (
             <div id="not-found">
-                <h2>No scientists matched that search. Please try again with a new query.</h2>
+                <h2>No scientists match your search. Please try again with a new query.</h2>
             </div>
         )
     }
@@ -21,6 +22,9 @@ function AllScientists({ dataSet }) {
                     image={data.image}
                     field={data.field}
                     accomplishment={data.accomplishment}
+                    favoriteScientist={favoriteScientist} 
+                    unfavoriteScientist={unfavoriteScientist}
+                    isFavorited={favoritedScientistIds.includes(data.id)}
                 />
         )
     })

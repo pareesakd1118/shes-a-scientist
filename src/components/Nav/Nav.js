@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 function Nav() {
     const [linkText, setLinkText] = useState("")
     const [path, setPath] = useState("")
+    const [favLinkText, setFavLinkText] = useState("")
+    const [favPath, setFavPath] = useState("")
     const location = useLocation();
 
     function switchLink() {
@@ -21,13 +23,31 @@ function Nav() {
         switchLink()
     })
 
+    function switchFavLink() {
+        if (location.pathname === "/favorites") {
+            setFavLinkText("Browse all scientists")
+            setFavPath("/scientists")
+        } else {
+            setFavLinkText("Favorite scientists")
+            setFavPath("/favorites")
+        }
+    }
+
+    useEffect(() => {
+        switchFavLink()
+    })
+
     return (
         <>
             <nav>
                 <Link to="/">
                     <h1>she's a scientist</h1>
                 </Link>
-                <Link className="underline" to={path}>{linkText}</Link>
+                <div id="nav-links">
+                    <Link className="underline" to={path}>{linkText}</Link>
+                    <div className="vertical-divider"></div>
+                    <Link className="underline" to={favPath}>{favLinkText}</Link>
+                </div>
             </nav>
             <div className="divider"></div>
         </>

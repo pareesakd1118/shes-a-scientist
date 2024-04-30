@@ -27,6 +27,7 @@ function Favorites({ dataSet, unfavoriteScientist, favoriteScientist }) {
                     accomplishment={data.accomplishment}
                     unfavoriteScientist={unfavoriteScientist} 
                     favoriteScientist={favoriteScientist}
+                    isFavorited={true}
                 />
         )
     })

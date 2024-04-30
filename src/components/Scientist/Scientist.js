@@ -2,22 +2,21 @@ import "./Scientist.css"
 import PropTypes from 'prop-types';
 import emptyheart from "../../assets/emptyheart.png";
 import fullheart from "../../assets/fullheart.png";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-function Scientist({ id, name, image, field, accomplishment }) {
-    const [heart, setHeart] = useState(emptyheart)
+
+function Scientist({ id, name, image, field, accomplishment, favoriteScientist, unfavoriteScientist, isFavorited = false }) {
 
     const handleFavoriting = () => {
-        if (heart === emptyheart) {
-            setHeart(fullheart)
+        if (!isFavorited) {
+            favoriteScientist(id)
         } else {
-            setHeart(emptyheart)
+            unfavoriteScientist(id)
         }
     }
 
     let nameArray = name.split(" ")
     let lastName = nameArray.slice(1).join(" ")
-    console.log("lastName", lastName)
     let firstName = nameArray[0]
     let firstInitial = firstName.split("")[0]
     let formattedName = `${firstInitial}. ${lastName}`
@@ -26,7 +25,7 @@ function Scientist({ id, name, image, field, accomplishment }) {
         <div className="scientist" id={id}>
             <div id="sci-name-heart">
             <Link id="sci-name" to={`/scientist/${id}`} key={id}>{name.split("").length > 20 ? formattedName : name}</Link>
-                <img id="heart" src={heart} onClick={handleFavoriting} alt="heart" />
+                <img id="heart" src={isFavorited ? fullheart : emptyheart} onClick={() => handleFavoriting(id)} alt="heart" />
             </div>
             <Link to={`/scientist/${id}`} key={id}>
                 <div className="image-container">
