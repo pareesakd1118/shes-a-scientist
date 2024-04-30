@@ -65,7 +65,8 @@ describe('FirstPage Component', () => {
     cy.get('.background-image').should('be.visible');
     cy.get('.fp-accomp').should('be.visible');
     cy.get('h1').contains("she's a scientist").should('be.visible');
-    cy.get('.underline').should('be.visible');
+    cy.get('#browse-link').should('be.visible');
+    cy.get('#fav-link').should('be.visible');
     cy.get('.frontpage-image-div').children().should('have.length', 5);
     cy.get('.frontpage-image-div').first().contains('NGC 3132');
     cy.get('.frontpage-image-div').first().contains('Green Flourescent Protein (GFP');
@@ -98,10 +99,20 @@ describe('FirstPage Component', () => {
   });
 
   it('Browse scientists link takes user to dashboard with all scientists and then takes you back home to the main page if you click it again', () => {
-    cy.get('.underline').click();
+    cy.get('#browse-link').click();
     cy.get('.scientist-container').should('be.visible');
-    cy.get('.underline').contains("Back home");
-    cy.get('.underline').click();
+    cy.get('#browse-link').contains("Back home");
+    cy.get('#browse-link').click();
     cy.get('.fpcont').should('be.visible');
+  });
+
+  it('Favorite scientists link takes user to dashboard with all scientists and then takes you back home to the main page if you click it again', () => {
+    cy.get('#fav-link').click();
+    cy.get('.scientist-container').should('be.visible');
+    cy.url().should('include', 'favorites');
+    cy.get('#fav-link').contains("Browse all scientists");
+    cy.get('#fav-link').click();
+    cy.get('.scientist-container').should('be.visible');
+    cy.get('#fav-link').contains("Favorite scientists");
   });
 });
