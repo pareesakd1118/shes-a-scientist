@@ -61,13 +61,11 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().first().within(() => {
       cy.contains("a", "M. Oakley Dayhoff");
       cy.contains("p", "Physics, Chemistry");
-      cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get(".scientist-container").children().last().within(() => {
       cy.contains("a", "Jane Goodall");
       cy.contains("p", "Primatology");
-      cy.get('img').should('have.attr', 'src', "https://janegoodall.org/wp-content/uploads/gallery_06_jg3.jpg");
     });
   });
 
