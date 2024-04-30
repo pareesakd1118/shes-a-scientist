@@ -6,7 +6,7 @@ import LoadingPage from "../LoadingPage/LoadingPage";
 import React, {useState, useEffect} from "react";
 import Error from "../Error/Error";
 
-function SecondPage({ favoriteScientist, unfavoriteScientist, favoriteScientists }) {
+function SecondPage({ toggleFavorite, favoriteScientists }) {
     const [allData, setAllData] = useState([])
     const [searchData, setSearchData] = useState([])
     const [loading, setLoading] = useState(true)
@@ -61,7 +61,7 @@ function SecondPage({ favoriteScientist, unfavoriteScientist, favoriteScientists
     return (
         <div>
             <SearchBar filterByField={filterByField} searchByKeyword={searchByKeyword} reset={reset} />
-            <AllScientists favoriteScientists={favoriteScientists} dataSet={searchData} favoriteScientist={favoriteScientist} unfavoriteScientist={unfavoriteScientist}/>
+            <AllScientists favoriteScientists={favoriteScientists} dataSet={searchData} toggleFavorite={toggleFavorite}/>
         </div>
     )
 }

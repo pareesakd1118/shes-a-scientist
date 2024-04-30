@@ -2,7 +2,7 @@ import "./AllScientists.css";
 import Scientist from "../Scientist/Scientist";
 import PropTypes from 'prop-types';
 
-function AllScientists({ dataSet, favoriteScientist, unfavoriteScientist, favoriteScientists }) {
+function AllScientists({ dataSet, toggleFavorite, favoriteScientists }) {
     const favoritedScientistIds = favoriteScientists.map(scientist => scientist.id)
 
     if (!dataSet.length) {
@@ -22,8 +22,7 @@ function AllScientists({ dataSet, favoriteScientist, unfavoriteScientist, favori
                     image={data.image}
                     field={data.field}
                     accomplishment={data.accomplishment}
-                    favoriteScientist={favoriteScientist} 
-                    unfavoriteScientist={unfavoriteScientist}
+                    toggleFavorite={toggleFavorite}
                     isFavorited={favoritedScientistIds.includes(data.id)}
                 />
         )
@@ -45,5 +44,7 @@ AllScientists.propTypes = {
         image: PropTypes.string.isRequired,
         field: PropTypes.string.isRequired,
         accomplishment: PropTypes.string.isRequired,
+        toggleFavorite: PropTypes.func.isRequired,
+        isFavorited: PropTypes.bool.isRequired,
       })).isRequired
 };

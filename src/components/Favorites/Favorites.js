@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 
-function Favorites({ dataSet, unfavoriteScientist, favoriteScientist }) {
+function Favorites({ dataSet, toggleFavorite }) {
   
     if (!dataSet.length) {
         return (
@@ -25,8 +25,7 @@ function Favorites({ dataSet, unfavoriteScientist, favoriteScientist }) {
                     image={data.image}
                     field={data.field}
                     accomplishment={data.accomplishment}
-                    unfavoriteScientist={unfavoriteScientist} 
-                    favoriteScientist={favoriteScientist}
+                    toggleFavorite={toggleFavorite}
                     isFavorited={true}
                 />
         )
@@ -48,5 +47,6 @@ Favorites.propTypes = {
         image: PropTypes.string.isRequired,
         field: PropTypes.string.isRequired,
         accomplishment: PropTypes.string.isRequired,
-      })).isRequired
+      })).isRequired,
+    toggleFavorite: PropTypes.func.isRequired
 };

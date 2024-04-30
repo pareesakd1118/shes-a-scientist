@@ -43,13 +43,14 @@ function App() {
     window.localStorage.setItem("FAV_SCIENTISTS", JSON.stringify(favoriteScientists));
   }, [favoriteScientists]);
 
-  function favoriteScientist(id) {
-    let favorite = allData.find(data => parseInt(data.id) === parseInt(id));
-    setFavoriteScientists(prevFavoriteScientists => [...prevFavoriteScientists, favorite]);
-  }
 
-  function unfavoriteScientist(id) {
-    setFavoriteScientists(prevFavoriteScientists => prevFavoriteScientists.filter(data => parseInt(data.id) !== parseInt(id)));
+  function toggleFavorite(id) {
+    let favorite = allData.find(data => parseInt(data.id) === parseInt(id));
+    if (!favoriteScientists.includes(favorite)) {
+      setFavoriteScientists(prevFavoriteScientists => [...prevFavoriteScientists, favorite]);
+    } else {
+      setFavoriteScientists(prevFavoriteScientists => prevFavoriteScientists.filter(data => parseInt(data.id) !== parseInt(id)))
+    }
   }
 
   if (error) {
@@ -65,11 +66,11 @@ function App() {
     <Nav />
     <Routes >
       <Route path="/" element={<FirstPage />} />
-      <Route path="/scientists" element={<SecondPage favoriteScientists={favoriteScientists} favoriteScientist={favoriteScientist} unfavoriteScientist={unfavoriteScientist}/>} />
+      <Route path="/scientists" element={<SecondPage favoriteScientists={favoriteScientists} toggleFavorite={toggleFavorite}/>} />
       <Route path="/scientist/:id" element={<ScientistDetails />} />
       <Route path="/*" element={<NotFound />} />
       <Route path="/mission" element={<MissionStatement />} />
-      <Route path="/favorites" element={<Favorites dataSet={favoriteScientists} favoriteScientist={favoriteScientist} unfavoriteScientist={unfavoriteScientist}/>} />
+      <Route path="/favorites" element={<Favorites dataSet={favoriteScientists} toggleFavorite={toggleFavorite}/>} />
     </Routes>
     <Footer />
     </>

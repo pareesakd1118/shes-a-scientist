@@ -2,17 +2,12 @@ import "./Scientist.css"
 import PropTypes from 'prop-types';
 import emptyheart from "../../assets/emptyheart.png";
 import fullheart from "../../assets/fullheart.png";
-import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Scientist({ id, name, image, field, accomplishment, favoriteScientist, unfavoriteScientist, isFavorited = false }) {
+function Scientist({ id, name, image, field, accomplishment, toggleFavorite, isFavorited }) {
 
     const handleFavoriting = () => {
-        if (!isFavorited) {
-            favoriteScientist(id)
-        } else {
-            unfavoriteScientist(id)
-        }
+        toggleFavorite(id)
     }
 
     let nameArray = name.split(" ")
@@ -48,4 +43,6 @@ Scientist.propTypes = {
     image: PropTypes.string.isRequired,
     field: PropTypes.string.isRequired,
     accomplishment: PropTypes.string.isRequired,
+    isFavorited: PropTypes.bool.isRequired,
+    toggleFavorite: PropTypes.func.isRequired
 };
