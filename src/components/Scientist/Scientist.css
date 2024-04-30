@@ -49,6 +49,7 @@
     position: absolute;
     right: 22%;
     bottom: 8%;
+    cursor: pointer;
 }
 
 #sci-name-heart {
