@@ -59,13 +59,13 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().should('have.length', 4)
 
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "M. Oakley Dayhoff");
+      cy.contains("a", "M. Oakley Dayhoff");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get(".scientist-container").children().last().within(() => {
-      cy.contains("h3", "Jane Goodall");
+      cy.contains("a", "Jane Goodall");
       cy.contains("p", "Primatology");
       cy.get('img').should('have.attr', 'src', "https://janegoodall.org/wp-content/uploads/gallery_06_jg3.jpg");
     });
@@ -80,13 +80,13 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().should('have.length', 2);
 
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "M. Oakley Dayhof");
+      cy.contains("a", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get(".scientist-container").children().last().within(() => {
-      cy.contains("h3", "Marie Curie");
+      cy.contains("a", "Marie Curie");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTfAXO57aVAkHz63QhlrUGfwIpwI9GqdNEl-1hMBBlWgJAk1y71AvhjylR5EC7lULxzMODPhIvsYLwtirc");
     });
@@ -97,7 +97,7 @@ describe('Secondpage Component', () => {
     cy.get('input[type="text"]').type('Margaret').should('have.value', 'Margaret');
     cy.get(".scientist-container").children().should('have.length', 1);
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "M. Oakley Dayhof");
+      cy.contains("a", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
@@ -161,8 +161,4 @@ describe('Secondpage Component', () => {
     cy.get('#sd-bg-image').should('have.attr', 'src', "https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/2020/02/jg_ap0170_4.png");
     cy.get("#sd").contains("p", "Jane Goodall, born in 1934, is a renowned primatologist, ethologist, and conservationist best known for her groundbreaking");
   });
-
-
-
-  
 });
