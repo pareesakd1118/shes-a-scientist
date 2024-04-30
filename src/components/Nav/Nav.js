@@ -44,9 +44,9 @@ function Nav() {
                     <h1>she's a scientist</h1>
                 </Link>
                 <div id="nav-links">
-                    <Link className="underline" to={path}>{linkText}</Link>
+                    <Link className="underline" id="browse-link" to={path}>{linkText}</Link>
                     <div className="vertical-divider"></div>
-                    <Link className="underline" to={favPath}>{favLinkText}</Link>
+                    <Link className="underline" id="fav-link" to={favPath}>{favLinkText}</Link>
                 </div>
             </nav>
             <div className="divider"></div>
