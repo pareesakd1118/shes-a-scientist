@@ -98,7 +98,7 @@ describe('Secondpage Component', () => {
     });
 
     cy.get('input[type="text"]').type('hfejfjkkewjfk').should('have.value', 'Margarethfejfjkkewjfk');
-    cy.get("#not-found").contains('h2', "No scientists matched that search. Please try again with a new query.");
+    cy.get("#not-found").contains('h2', "No scientists match your search. Please try again with a new query.");
     cy.get('.reset-btn').click();
     cy.get(".scientist-container").children().should('have.length', 4);
   });
