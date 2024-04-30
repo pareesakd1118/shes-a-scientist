@@ -76,6 +76,5 @@ https://github.com/pareesakd1118/shes-a-scientist/assets/150022029/395487de-e2b6
 
 ## Future Improvements:
   ```
-  - Add a favoriting feature to save favorite scientists.
   - Add a form for others to post their submissions to the database and have more scientists added to the dashboard. 
   ```
