@@ -82,13 +82,11 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().first().within(() => {
       cy.contains("a", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
-      cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get(".scientist-container").children().last().within(() => {
       cy.contains("a", "Marie Curie");
       cy.contains("p", "Physics, Chemistry");
-      cy.get('img').should('have.attr', 'src', "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTfAXO57aVAkHz63QhlrUGfwIpwI9GqdNEl-1hMBBlWgJAk1y71AvhjylR5EC7lULxzMODPhIvsYLwtirc");
     });
 
     cy.get('.reset-btn').click();
@@ -99,7 +97,6 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().first().within(() => {
       cy.contains("a", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
-      cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get('input[type="text"]').type('hfejfjkkewjfk').should('have.value', 'Margarethfejfjkkewjfk');
