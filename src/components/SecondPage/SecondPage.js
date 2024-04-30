@@ -6,7 +6,7 @@ import LoadingPage from "../LoadingPage/LoadingPage";
 import React, {useState, useEffect} from "react";
 import Error from "../Error/Error";
 
-function SecondPage() {
+function SecondPage({ toggleFavorite, favoriteScientists }) {
     const [allData, setAllData] = useState([])
     const [searchData, setSearchData] = useState([])
     const [loading, setLoading] = useState(true)
@@ -31,11 +31,19 @@ function SecondPage() {
         setSearchData(filteredArray)
     }
 
-    function searchByKeyword(keyword) {
-        let filteredArray = allData.filter(data => {
-           return data.name.toLowerCase().includes(keyword.toLowerCase()) || data.accomplishment.toLowerCase().includes(keyword.toLowerCase()) || data.blurb.toLowerCase().includes(keyword.toLowerCase()) 
-        })
-        setSearchData(filteredArray)
+    function searchByKeyword(keyword, field) {
+        if (!field) {
+            let filteredArray = allData.filter(data => {
+                return data.name.toLowerCase().includes(keyword.toLowerCase()) || data.accomplishment.toLowerCase().includes(keyword.toLowerCase()) || data.blurb.toLowerCase().includes(keyword.toLowerCase()) 
+            })
+            setSearchData(filteredArray)
+        } else {
+            let fieldArray = allData.filter(data => data.field.toLowerCase().includes(field.toLowerCase()))
+            let filteredArray = fieldArray.filter(data => {
+                return data.name.toLowerCase().includes(keyword.toLowerCase()) || data.accomplishment.toLowerCase().includes(keyword.toLowerCase()) || data.blurb.toLowerCase().includes(keyword.toLowerCase()) 
+                })
+            setSearchData(filteredArray)
+        }
     }
 
     function reset() {
@@ -53,7 +61,7 @@ function SecondPage() {
     return (
         <div>
             <SearchBar filterByField={filterByField} searchByKeyword={searchByKeyword} reset={reset} />
-            <AllScientists dataSet={searchData} />
+            <AllScientists favoriteScientists={favoriteScientists} dataSet={searchData} toggleFavorite={toggleFavorite}/>
         </div>
     )
 }

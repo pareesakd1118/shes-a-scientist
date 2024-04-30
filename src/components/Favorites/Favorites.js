@@ -1,19 +1,22 @@
-import "./AllScientists.css";
+import "./Favorites.css";
 import Scientist from "../Scientist/Scientist";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import React from "react";
 
-function AllScientists({ dataSet, toggleFavorite, favoriteScientists }) {
-    const favoritedScientistIds = favoriteScientists.map(scientist => scientist.id)
 
+function Favorites({ dataSet, toggleFavorite }) {
+  
     if (!dataSet.length) {
         return (
             <div id="not-found">
-                <h2>No scientists match your search. Please try again with a new query.</h2>
+                <h2>You don't have any favorite scientists yet!</h2>
+                <Link className="ms-link" to="/scientists">Select favorites now</Link>
             </div>
         )
     }
 
-    const allScientists = dataSet.map(data => {
+    const favorites = dataSet.map(data => {
         return (
                 <Scientist 
                     key={data.id}
@@ -23,28 +26,27 @@ function AllScientists({ dataSet, toggleFavorite, favoriteScientists }) {
                     field={data.field}
                     accomplishment={data.accomplishment}
                     toggleFavorite={toggleFavorite}
-                    isFavorited={favoritedScientistIds.includes(data.id)}
+                    isFavorited={true}
                 />
         )
     })
 
     return (
         <div className="scientist-container">
-            {allScientists}
+            {favorites}
         </div>
     )
 }
 
-export default AllScientists
+export default Favorites
 
-AllScientists.propTypes = {
+Favorites.propTypes = {
     dataSet: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
         field: PropTypes.string.isRequired,
         accomplishment: PropTypes.string.isRequired,
-        toggleFavorite: PropTypes.func.isRequired,
-        isFavorited: PropTypes.bool.isRequired,
-      })).isRequired
+      })).isRequired,
+    toggleFavorite: PropTypes.func.isRequired
 };

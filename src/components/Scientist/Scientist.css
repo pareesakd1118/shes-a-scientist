@@ -1,4 +1,3 @@
-
 .grid-image {
     width: 30vh;
     height: 30vh;
@@ -11,13 +10,11 @@
     position: relative;
 }
 
-h3 {
-    margin-bottom: 1%;
-    font-size: large;
-}
-
 #sci-name {
     margin-left: 8%;
+    font-family: 'Faustina', sans-serif;
+    margin-bottom: 1%;
+    font-size: large;
 }
 
 .text {
@@ -45,4 +42,16 @@ h3 {
 
 .scientist:hover .overlay {
     opacity: 1;
+}
+
+#heart {
+    height: 3vh;
+    position: absolute;
+    right: 22%;
+    bottom: 8%;
+}
+
+#sci-name-heart {
+    display: flex;
+    position: relative;
 }

@@ -10,11 +10,12 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
     const handleSelect = (event) => {
         setField(event.target.value)
         filterByField(event.target.value)
+        setSearch("")
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        searchByKeyword(search)
+    const handleChange = (event) => {
+        setSearch(event.target.value)
+        searchByKeyword(event.target.value, field)
     }
 
     const resetSearch = (event) => {
@@ -45,8 +46,8 @@ function SearchBar({ filterByField, searchByKeyword, reset }) {
                 </select>
                 <div className="vertical-divider"></div>
                 <div id="search-div">
-                    <input type="text" value={search} onChange={event => setSearch(event.target.value)} placeholder="Search for scientist" />
-                    <img id="magnifyglass" src={logo} alt="magnifying glass" onClick={handleSubmit} />
+                    <img id="magnifyglass" src={logo} alt="magnifying glass" />
+                    <input type="text" value={search} onChange={handleChange} placeholder="Type to search" />
                 </div>
                 <div className="vertical-divider"></div>
                 <button className="reset-btn" onClick={resetSearch} >All scientists</button>
