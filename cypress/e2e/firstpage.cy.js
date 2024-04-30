@@ -105,7 +105,7 @@ describe('FirstPage Component', () => {
     cy.get('.fpcont').should('be.visible');
   });
 
-  it('Favorite scientists link takes user to dashboard with all scientists and then takes you back home to the main page if you click it again', () => {
+  it('Favorite scientists link takes user to dashboard with all scientists and then takes you back home to scientist dashboard if you click it again', () => {
     cy.get('#fav-link').click();
     cy.url().should('include', 'favorites');
     cy.get('#fav-link').contains("Browse all scientists");
@@ -114,9 +114,6 @@ describe('FirstPage Component', () => {
       cy.get('.scientist-container').should('be.visible');
       cy.get('#fav-link').contains("Favorite scientists");
     })
-    // cy.get('#fav-link').click();
-    // cy.get('.scientist-container').should('be.visible');
-    // cy.get('#fav-link').contains("Favorite scientists");
   });
 });
 

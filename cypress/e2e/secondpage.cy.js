@@ -59,7 +59,7 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().should('have.length', 4)
 
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "Margaret Oakley Dayhoff");
+      cy.contains("h3", "M. Oakley Dayhoff");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
@@ -163,6 +163,8 @@ describe('Secondpage Component', () => {
     cy.get('#sd-bg-image').should('have.attr', 'src', "https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/2020/02/jg_ap0170_4.png");
     cy.get("#sd").contains("p", "Jane Goodall, born in 1934, is a renowned primatologist, ethologist, and conservationist best known for her groundbreaking");
   });
+
+
 
   
 });
