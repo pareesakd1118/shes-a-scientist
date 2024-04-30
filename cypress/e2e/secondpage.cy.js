@@ -80,7 +80,7 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().should('have.length', 2);
 
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "Margaret Oakley Dayhoff");
+      cy.contains("h3", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
@@ -95,16 +95,14 @@ describe('Secondpage Component', () => {
     cy.get(".scientist-container").children().should('have.length', 4);
 
     cy.get('input[type="text"]').type('Margaret').should('have.value', 'Margaret');
-    cy.get('#magnifyglass').click();
     cy.get(".scientist-container").children().should('have.length', 1);
     cy.get(".scientist-container").children().first().within(() => {
-      cy.contains("h3", "Margaret Oakley Dayhoff");
+      cy.contains("h3", "M. Oakley Dayhof");
       cy.contains("p", "Physics, Chemistry");
       cy.get('img').should('have.attr', 'src', 'https://upload.wikimedia.org/wikipedia/en/e/e5/Photo_of_Margaret_Oakley_Dayhoff.jpg');
     });
 
     cy.get('input[type="text"]').type('hfejfjkkewjfk').should('have.value', 'Margarethfejfjkkewjfk');
-    cy.get('#magnifyglass').click();
     cy.get("#not-found").contains('h2', "No scientists matched that search. Please try again with a new query.");
     cy.get('.reset-btn').click();
     cy.get(".scientist-container").children().should('have.length', 4);
