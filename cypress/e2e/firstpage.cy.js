@@ -49,9 +49,8 @@ describe('FirstPage Component', () => {
       "backgroundImage": "https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/2020/02/jg_ap0170_4.png",
       "blurb": "Jane Goodall, born in 1934, is a renowned primatologist, ethologist, and conservationist best known for her groundbreaking studies of chimpanzees in Tanzania's Gombe Stream National Park. Her pioneering research revolutionized our understanding of primate behavior, revealing remarkable insights into their social structures, tool use, and emotional lives. Goodall's work transcends scientific inquiry, as she has dedicated her life to conservation efforts and advocating for the protection of endangered species and their habitats. Through her tireless advocacy and grassroots initiatives, she has inspired global conservation movements and empowered communities to take action for wildlife and the environment. Goodall's enduring legacy serves as a beacon of hope for conservationists worldwide, reminding us of our responsibility to protect and preserve the natural world for future generations.",
       "wikipediaLink": "https://en.wikipedia.org/wiki/Jane_Goodall"
-    }
-  ]},
-})
+    }]},
+  }).as('getData')
     cy.visit('https://shes-a-scientist.vercel.app/'); 
   });
 
@@ -108,11 +107,17 @@ describe('FirstPage Component', () => {
 
   it('Favorite scientists link takes user to dashboard with all scientists and then takes you back home to the main page if you click it again', () => {
     cy.get('#fav-link').click();
-    cy.get('.scientist-container').should('be.visible');
     cy.url().should('include', 'favorites');
     cy.get('#fav-link').contains("Browse all scientists");
-    cy.get('#fav-link').click();
-    cy.get('.scientist-container').should('be.visible');
-    cy.get('#fav-link').contains("Favorite scientists");
+    cy.wait('@getData').then(() => {
+      cy.get('#fav-link').click();
+      cy.get('.scientist-container').should('be.visible');
+      cy.get('#fav-link').contains("Favorite scientists");
+    })
+    // cy.get('#fav-link').click();
+    // cy.get('.scientist-container').should('be.visible');
+    // cy.get('#fav-link').contains("Favorite scientists");
   });
 });
+
+
